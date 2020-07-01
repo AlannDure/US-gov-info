@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>House_data</title>
+    <title>house_data</title>
 </head>
 
 <body>
@@ -84,29 +84,21 @@
             <h4>Filter By Party:</h4>
 
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="R" onchange="loadMembers()"
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="R" v-on:click="loadMembers"
                     name="party" checked>
-
                 <label class="form-check-label" for="inlineCheckbox1">Republican</label>
-
-
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="D" onchange="loadMembers()"
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="D" v-on:click="loadMembers"
                     name="party" checked>
 
                 <label class="form-check-label" for="inlineCheckbox2">Democrat</label>
-
-
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="I" onchange="loadMembers()"
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="I" v-on:click="loadMembers"
                     name="party" checked>
-
                 <label class="form-check-label" for="inlineCheckbox3">Independent</label>
             </div>
 
-
-
             <div class="form-check form-check-inline">
                 <h4>Filter By State:</h4>
-                <select id="state" onchange="loadMembers()">
+                <select id="state" v-on:change="loadMembers">
                     <option value="All">All</option>
                     <option v-bind:value="state" v-for="state in estados">{{state}}</option>
                 </select>
@@ -138,7 +130,6 @@
         <div class="card text-center">
 
             <div class="card-body">
-
                 <a href="#" class="btn btn-primary">Go Up</a>
             </div>
             <div class="card-footer text-muted">
@@ -155,7 +146,7 @@
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="javascript/house-data.js"></script>
+    <script src="scripts/house-data.js"></script>
 
 
 </body>
